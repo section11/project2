@@ -46,3 +46,120 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*Begin site styles below */
+html{
+  font-size: 1.125em; /* 18 / 16 = 1.125 */
+  line-height: 1.222em; /* 22 / 18 = 1.222 */
+  text-rendering: optimizeLegibility;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #99ccff;
+}
+
+body {
+  padding-top: 2.444em; /* 44 / 18 = 2.444 */
+  padding-right: 1.222em; /* 22 / 18 = 1.222 */
+  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+}
+
+h1,h2,h3,p {
+  padding-bottom: 1.222em;
+}
+h1 {
+  color: #666;
+}
+h2 {
+  font-size: 1.777em; /* 31.984 / 18 = 1.777 */
+  line-height: 1.0318em; /* 33 / 31.984 = 1.0318 */
+  padding-bottom: 0.689em; /* 22 / 31.984 = 0.689 */
+}
+h3 {
+  font-weight: bold;
+  padding-top: 1.222em; /* 22 / 18 = 1.222 */
+  padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
+}
+
+li {
+  padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
+}
+ul,ol {
+  padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
+  color: #ffffcc;
+}
+ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+}
+li > ul,
+li > ol {
+  padding-top:  0.611em; /* 11 / 18 = 0.611 */
+  padding-left: 1.8333em; /* 22 / 18 = 1.222 */
+  padding-bottom: 0;
+}
+li li:last-child {
+  padding-bottom: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* State */
+@media screen and (min-width: 370px) {
+  body {
+    padding-right: 5.9459459%; /* 22 / 370 = 0.059459459 */
+    padding-left: 5.9459459%; /* 22 / 370 = 0.059459459 */
+  }
+}
+@media screen and (min-width: 625px) {
+  html {
+    font-size: 1.25em; /* 20 / 16 = 1.25 */
+  }
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    padding-right: 11.1111111%; /* 80 / 720 = 0.111111111 */
+    padding-left: 11.1111111%; /* 80 / 720 = 0.111111111 */
+  }
+}
+
+@media screen and (min-width: 920px) {
+  /*
+   920px / whole screen
+   -60px / margins (total)
+   275px / column
+    17.5px / gutter
+   Left-hand column : 275 * 2 + 17.5 = 567.5
+   Right-hand column: 275px, offset by 17.5
+  */
+  body {
+
+  }
+  #primary {
+    width: 65.9883721%; /* 567.5 / 860 = 0.659883721 */
+    float: left;
+  }
+  #supporting {
+    width: 31.9767442%; /* 275 / 860 = 0.319767442 */
+    margin-left: 2.0348837%; /* 17.5 / 860 = 0.020348837 */
+    float: left;
+  }
+  #footer {
+    clear: both;
+    float: none;
+  }
+}
+@media screen and (min-width: 1185px) {
+  body {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+}
