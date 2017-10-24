@@ -56,11 +56,11 @@ html{
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  background-color: #99ccff;
+  background-color: #ebedf3;
 }
 
 body {
-  padding-top: 2.444em; /* 44 / 18 = 2.444 */
+  padding-top: 2.074em; /* 44 / 18 = 2.444 */
   padding-right: 1.222em; /* 22 / 18 = 1.222 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
 }
@@ -69,7 +69,7 @@ h1,h2,h3,p {
   padding-bottom: 1.222em;
 }
 h1 {
-  color: #666;
+  color: #222222;
 }
 h2 {
   font-size: 1.777em; /* 31.984 / 18 = 1.777 */
