@@ -61,8 +61,8 @@ html{
 
 body {
   padding-top: 2.0em; /* 36 / 18 = 2.444 */
-  padding-right: 1.222em; /* 22 / 18 = 1.222 */
-  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+  padding-right: 1em; /* 22 / 18 = 1.222 */
+  padding-left: 1em; /* 22 / 18 = 1.222 */
 }
 
 h1,h2,h3,p {
@@ -110,6 +110,10 @@ img {
     height: auto;
 }
 
+figcaption{
+	font-size: 0.77em; /* 14 / 18 = 0.77 */
+}
+
 
 /* State */
 @media screen and (min-width: 370px) {
@@ -122,6 +126,21 @@ img {
   html {
     font-size: 1.25em; /* 20 / 16 = 1.25 */
   }
+
+	#main, #secondary, #third{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#main > p{
+		flex-basis: 30%;
+	}
+	#secondary > p{
+		flex-basis: 40%;
+	}
+	#secondary figure{
+		flex-basis: 25%;
+	}
 }
 
 @media screen and (min-width: 720px) {
@@ -129,37 +148,34 @@ img {
     padding-right: 11.1111111%; /* 80 / 720 = 0.111111111 */
     padding-left: 11.1111111%; /* 80 / 720 = 0.111111111 */
   }
+	#secondary > p{
+		flex-basis: 35%;
+	}
+	#secondary figure{
+		flex-basis: 25%;
+	}
 }
 
-@media screen and (min-width: 920px) {
-  /*
-   920px / whole screen
-   -60px / margins (total)
-   275px / column
-    17.5px / gutter
-   Left-hand column : 275 * 2 + 17.5 = 567.5
-   Right-hand column: 275px, offset by 17.5
-  */
+@media screen and (min-width: 800px) {
   body {
 
   }
-  #primary {
-    width: 65.9883721%; /* 567.5 / 860 = 0.659883721 */
-    float: left;
-  }
-  #supporting {
-    width: 31.9767442%; /* 275 / 860 = 0.319767442 */
-    margin-left: 2.0348837%; /* 17.5 / 860 = 0.020348837 */
-    float: left;
-  }
-  #footer {
-    clear: both;
-    float: none;
-  }
+	#main, #secondary, #third{
+		display: flex;
+	}
+	#main > p{
+		flex-basis: 33%;
+	}
+	#secondary > p{
+		flex-basis: 30%;
+	}
+	#secondary figure{
+		flex-basis: 25%;
+	}
 }
 @media screen and (min-width: 1185px) {
   body {
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 15%;
+    padding-left: 15%;
   }
 }
